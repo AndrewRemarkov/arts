@@ -75,6 +75,7 @@ const modals = () => {
 				if (!display) {
 					modal.classList.add('show')
 					document.body.classList.add('modal-open')
+					document.body.style.marginRight = `${scroll}px`
 
 					localStorage.setItem('modalShown', 'true')
 				}
