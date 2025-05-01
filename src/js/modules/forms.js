@@ -2,7 +2,7 @@ import IMask from 'imask'
 
 import { postData } from '../services/requests'
 
-const forms = () => {
+const forms = (state) => {
 	const form = document.querySelectorAll('form')
 	const inputs = document.querySelectorAll('input')
 	const upload = document.querySelectorAll('[name="upload"]')
@@ -23,10 +23,6 @@ const forms = () => {
 			lazy: false
 		}
 		const phoneMask = IMask(input, maskOptions)
-
-		const errorElement = document.querySelector(
-			`.error[data-for="${input.id}"]`
-		)
 
 		function validatePhoneNumber() {
 			const value = phoneMask.unmaskedValue
@@ -133,6 +129,8 @@ const forms = () => {
 			statusMessage.appendChild(textMessage)
 
 			const formData = new FormData(item)
+
+			console.log(formData)
 
 			let API
 			item.closest('.popup-design') ||

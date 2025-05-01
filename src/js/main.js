@@ -2,6 +2,7 @@ import modal from './modules/modal'
 import sliders from './modules/slider'
 import forms from './modules/forms'
 import showMoreStyles from './modules/showMoreStyles'
+import calc from './modules/calc'
 
 document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
@@ -17,4 +18,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	sliders('.main-slider-item', 'vertical', '', '', 10000)
 	forms()
 	showMoreStyles('.button-styles', '.styles .row', 'assets/db.json')
+	calc('#size', '#material', '#options', '.promocode', '.calc-price')
 })
