@@ -646,6 +646,7 @@ h4 {
 }
 .portfolio-wrapper {
 	display: flex;
+	justify-content: space-around;
 	flex-wrap: wrap;
 }
 .portfolio-block {
@@ -1430,9 +1431,7 @@ h4 {
 	.card-1 .p-heading {
 		margin: 2rem 0 3rem 0;
 	}
-	.portfolio-wrapper {
-		justify-content: space-around;
-	}
+
 	.portfolio-block {
 		width: auto;
 	}

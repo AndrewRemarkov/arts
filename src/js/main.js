@@ -3,6 +3,7 @@ import sliders from './modules/slider'
 import forms from './modules/forms'
 import showMoreStyles from './modules/showMoreStyles'
 import calc from './modules/calc'
+import filter from './modules/filter'
 
 document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
@@ -19,4 +20,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	forms()
 	showMoreStyles('.button-styles', '.styles .row', 'assets/db.json')
 	calc('#size', '#material', '#options', '.promocode', '.calc-price')
+	filter()
 })
