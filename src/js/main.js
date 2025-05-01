@@ -4,6 +4,7 @@ import forms from './modules/forms'
 import showMoreStyles from './modules/showMoreStyles'
 import calc from './modules/calc'
 import filter from './modules/filter'
+import pictureHover from './modules/pictureHover'
 
 document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
@@ -21,4 +22,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	showMoreStyles('.button-styles', '.styles .row', 'assets/db.json')
 	calc('#size', '#material', '#options', '.promocode', '.calc-price')
 	filter()
+	pictureHover('.sizes-block')
 })

@@ -1,16 +1,10 @@
 const sliders = (slides, direction, prev, next, timer) => {
 	let slideIndex = 1
 	let pause = false
-
 	const items = document.querySelectorAll(slides)
 
 	const showSlides = (n) => {
-		if (n > items.length) {
-			slideIndex = 1
-		}
-		if (n < 1) {
-			slideIndex = items.length
-		}
+		slideIndex = n > items.length ? 1 : n < 1 ? items.length : n
 		items.forEach((item) => {
 			item.classList.add('animated')
 			item.style.display = 'none'
@@ -18,52 +12,57 @@ const sliders = (slides, direction, prev, next, timer) => {
 		items[slideIndex - 1].style.display = 'block'
 	}
 
+	const plusSlides = (n, animationClass) => {
+		showSlides((slideIndex += n))
+		const currentSlide = items[slideIndex - 1]
+		currentSlide.classList.remove(
+			'slideInLeft',
+			'slideInRight',
+			'slideInDown'
+		)
+		currentSlide.classList.add(animationClass)
+	}
+
 	showSlides(slideIndex)
 
-	const plusSlides = (n) => {
-		showSlides((slideIndex += n))
-	}
+	if (prev || next) {
+		const prevButton = prev ? document.querySelector(prev) : null
+		const nextButton = next ? document.querySelector(next) : null
 
-	try {
-		const previousButton = document.querySelector(prev)
-		const nextButton = document.querySelector(next)
+		if (prevButton) {
+			prevButton.addEventListener('click', () => {
+				plusSlides(-1, 'slideInLeft')
+			})
+		}
 
-		previousButton.addEventListener('click', () => {
-			plusSlides(-1)
-			items[slideIndex - 1].classList.remove('slideInRight')
-			items[slideIndex - 1].classList.add('slideInLeft')
-		})
-
-		nextButton.addEventListener('click', () => {
-			plusSlides(1)
-			items[slideIndex - 1].classList.remove('slideInLeft')
-			items[slideIndex - 1].classList.add('slideInRight')
-		})
-	} catch (error) {
-		console.error('Error in slider module:', error)
-	}
-
-	const activateAnimation = () => {
-		if (direction === 'vertical') {
-			pause = setInterval(() => {
-				plusSlides(1)
-				items[slideIndex - 1].classList.add('slideInDown')
-			}, timer)
-		} else {
-			pause = setInterval(() => {
-				plusSlides(1)
-				items[slideIndex - 1].classList.remove('slideInLeft')
-				items[slideIndex - 1].classList.add('slideInRight')
-			}, timer)
+		if (nextButton) {
+			nextButton.addEventListener('click', () => {
+				plusSlides(1, 'slideInRight')
+			})
 		}
 	}
 
-	items[0].parentNode.addEventListener('mouseenter', () => {
+	const activateAnimation = () => {
 		clearInterval(pause)
-	})
-	items[0].parentNode.addEventListener('mouseleave', () => {
+		const animationClass =
+			direction === 'vertical' ? 'slideInDown' : 'slideInRight'
+
+		pause = setInterval(() => {
+			plusSlides(1, animationClass)
+		}, timer)
+	}
+
+	const sliderContainer = items[0]?.parentNode
+	if (sliderContainer) {
+		sliderContainer.addEventListener('mouseenter', () =>
+			clearInterval(pause)
+		)
+		sliderContainer.addEventListener('mouseleave', activateAnimation)
+	}
+
+	if (timer) {
 		activateAnimation()
-	})
+	}
 }
 
 export default sliders
