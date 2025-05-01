@@ -1,5 +1,7 @@
 import modal from './modules/modal'
 import sliders from './modules/slider'
+import forms from './modules/forms'
+import showMoreStyles from './modules/showMoreStyles'
 
 document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
@@ -13,4 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		5000
 	)
 	sliders('.main-slider-item', 'vertical', '', '', 10000)
+	forms()
+	showMoreStyles('.button-styles', '.styles .row', 'assets/db.json')
 })
