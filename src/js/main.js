@@ -8,6 +8,7 @@ import pictureHover from './modules/pictureHover'
 import accordion from './modules/accordion'
 import burger from './modules/burger'
 import scrolling from './modules/scrolling'
+import dragAndDrop from './modules/dragAndDrop'
 
 document.addEventListener('DOMContentLoaded', () => {
   'use strict'
@@ -23,4 +24,5 @@ document.addEventListener('DOMContentLoaded', () => {
   accordion('.accordion-heading')
   burger('.burger-menu', '.burger')
   scrolling('.pageup')
+  dragAndDrop()
 })
