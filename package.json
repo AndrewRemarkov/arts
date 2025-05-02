@@ -1,30 +1,35 @@
 {
-	"name": "picture",
-	"version": "1.0.0",
-	"description": "",
-	"main": "gulpfile.js",
-	"scripts": {
-		"gulp": "node --no-warnings=DEP0180 ./node_modules/gulp/bin/gulp.js"
-	},
-	"author": "",
-	"license": "ISC",
-	"browserslist": [
-		"> 1%",
-		"not dead"
-	],
-	"devDependencies": {
-		"@babel/core": "^7.22.5",
-		"@babel/preset-env": "^7.22.5",
-		"babel": "^6.23.0",
-		"babel-core": "^6.26.3",
-		"babel-loader": "^9.1.2",
-		"browser-sync": "^2.29.3",
-		"cheerio": "^1.0.0",
-		"core-js": "^3.31.0",
-		"gulp": "^4.0.2",
-		"imask": "^7.6.1",
-		"prettier": "^3.5.3",
-		"webpack": "^5.86.0",
-		"webpack-stream": "^7.0.0"
-	}
+  "name": "picture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "gulp": "node --no-warnings=DEP0180 ./node_modules/gulp/bin/gulp.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    "> 1%",
+    "not dead"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^9.1.2",
+    "browser-sync": "^2.29.3",
+    "cheerio": "^1.0.0",
+    "core-js": "^3.31.0",
+    "gulp": "^4.0.2",
+    "imask": "^7.6.1",
+    "prettier": "^3.5.3",
+    "stylelint": "^16.19.1",
+    "stylelint-config-property-sort-order-smacss": "^10.0.0",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "stylelint-order": "^7.0.0",
+    "stylelint-prettier": "^5.0.3",
+    "webpack": "^5.86.0",
+    "webpack-stream": "^7.0.0"
+  }
 }
