@@ -1,6 +1,8 @@
 {
   "printWidth": 140,
   "htmlWhitespaceSensitivity": "ignore",
+  "eslintIntegration": true,
+  "stylelintIntegration": true,
   "singleAttributePerLine": true,
   "bracketSameLine": false,
   "trailingComma": "none",

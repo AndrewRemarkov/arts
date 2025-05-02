@@ -8,14 +8,7 @@
         {
           "groupName": "positioning",
           "emptyLineBefore": "always",
-          "properties": [
-            "position",
-            "top",
-            "right",
-            "bottom",
-            "left",
-            "z-index"
-          ]
+          "properties": ["position", "top", "right", "bottom", "left", "z-index"]
         },
         {
           "groupName": "box-model",
@@ -90,15 +83,7 @@
         {
           "groupName": "misc",
           "emptyLineBefore": "always",
-          "properties": [
-            "overflow",
-            "overflow-x",
-            "overflow-y",
-            "cursor",
-            "visibility",
-            "transition",
-            "animation"
-          ]
+          "properties": ["overflow", "overflow-x", "overflow-y", "cursor", "visibility", "transition", "animation"]
         }
       ],
       {

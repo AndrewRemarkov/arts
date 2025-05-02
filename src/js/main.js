@@ -6,6 +6,7 @@ import calc from './modules/calc'
 import filter from './modules/filter'
 import pictureHover from './modules/pictureHover'
 import accordion from './modules/accordion'
+import burger from './modules/burger'
 
 document.addEventListener('DOMContentLoaded', () => {
   'use strict'
@@ -19,4 +20,5 @@ document.addEventListener('DOMContentLoaded', () => {
   filter()
   pictureHover('.sizes-block')
   accordion('.accordion-heading')
+  burger('.burger-menu', '.burger')
 })
