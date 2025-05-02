@@ -7,6 +7,7 @@ import filter from './modules/filter'
 import pictureHover from './modules/pictureHover'
 import accordion from './modules/accordion'
 import burger from './modules/burger'
+import scrolling from './modules/scrolling'
 
 document.addEventListener('DOMContentLoaded', () => {
   'use strict'
@@ -21,4 +22,5 @@ document.addEventListener('DOMContentLoaded', () => {
   pictureHover('.sizes-block')
   accordion('.accordion-heading')
   burger('.burger-menu', '.burger')
+  scrolling('.pageup')
 })

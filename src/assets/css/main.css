@@ -1736,6 +1736,23 @@ h4 {
   text-align: center;
 }
 
+.pageup {
+  position: fixed;
+  right: 5%;
+  bottom: 100px;
+  z-index: 30;
+
+  width: 26px;
+  height: 26px;
+
+  background-color: #fff;
+  border: 1px solid white;
+  opacity: 0;
+
+  cursor: pointer;
+  transition: 1s all;
+}
+
 @media (width <= 1399px) {
   .paints {
     display: none;
